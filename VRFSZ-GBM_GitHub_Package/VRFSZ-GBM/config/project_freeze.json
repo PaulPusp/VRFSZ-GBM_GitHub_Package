@@ -1,0 +1,66 @@
+{
+  "project": "VRFSZ-GBM",
+  "primary_threshold_m": 1.0,
+  "sensitivity_thresholds_m": [
+    0.5,
+    2.0
+  ],
+  "sar_classifier": {
+    "score": "0.5*(VV_event_dB - VV_pre_dB) + 0.5*(VH_event_dB - VH_pre_dB)",
+    "threshold_strategy": "event-specific Otsu under one common algorithm",
+    "histogram_bins": 512,
+    "threshold_direction": "flood if valid_land and score <= Otsu threshold",
+    "permanent_water_exclusion": "JRC Global Surface Water",
+    "uses_dem_or_vrfsz": false,
+    "categorical_resampling": "nearest-neighbor"
+  },
+  "inference": {
+    "primary_block_km": 80,
+    "bootstrap_replicates": 2000,
+    "robustness_block_widths_km": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "robustness_origins": 4,
+    "robustness_replicates": 5000,
+    "minimum_active_blocks_for_inference": 20,
+    "random_seed": 20260830
+  },
+  "final_corrected_results": {
+    "EVENT003_flood_fraction": 0.20534,
+    "RR": {
+      "T0.5m": {
+        "RR": 1.0031,
+        "CI95": [
+          0.9025,
+          1.0904
+        ]
+      },
+      "T1.0m": {
+        "RR": 0.9681,
+        "CI95": [
+          0.8702,
+          1.061
+        ]
+      },
+      "T2.0m": {
+        "RR": 0.9003,
+        "CI95": [
+          0.7769,
+          1.0383
+        ]
+      }
+    },
+    "interpretation": "NO SUPPORT for the predeclared positive VRFSZ\u2013SAR flood-detection association"
+  },
+  "external_evidence": {
+    "GFDS": "coarse independent passive-microwave corroboration only",
+    "GloFAS": "not used in final quantitative evidence",
+    "CYGNSS": "not used in final quantitative evidence",
+    "gauges": "no consistent event-matched gauge dataset incorporated"
+  },
+  "terrain_interpretation": "paired-product comparison unless official native-mirror equivalence is independently demonstrated"
+}

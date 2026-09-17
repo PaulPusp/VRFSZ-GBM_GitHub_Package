@@ -1,0 +1,10 @@
+asset,version_or_date,identifier_or_url,analytical_role,checksum
+GBM boundary,,,fixed study domain,
+DeltaDTM native,v1.1,,paired native terrain representation,
+DeltaDTM MSL/MDT aligned,v1.1,,paired MSL/MDT-aligned terrain representation,
+Sentinel-1 EVENT004,2017-08,,flood evidence,
+Sentinel-1 EVENT003,2020-07 corrected,,flood evidence,
+Sentinel-1 EVENT002,2024-08,,flood evidence,
+Sentinel-1 EVENT001,2026-07,,flood evidence,
+JRC Global Surface Water,v1.4,,permanent-water exclusion,
+GFDS,event-specific,,coarse independent microwave corroboration,

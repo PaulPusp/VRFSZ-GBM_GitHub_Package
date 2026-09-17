@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript and this repository."
+title: "VRFSZ-GBM Reproducibility Workflow"
+type: software
+authors:
+  - family-names: "Paul"
+    given-names: "Puspendu Biswas"
+repository-code: "https://github.com/PaulPusp/VRFSZ-GBM"
